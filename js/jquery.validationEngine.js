@@ -635,7 +635,8 @@
 			 // Otherwise if we are doing a function call, make the call and return the object
 			 // that is passed back.
 			 if (rule == "custom") {
-				 var custom_validation_type_index = rules.indexOf(rule) + 1;
+				 //var custom_validation_type_index = rules.indexOf(rule) + 1; // not working in IE
+                                        var custom_validation_type_index = $.inArray(rule, rules) + 1;
 				 var custom_validation_type = rules[custom_validation_type_index];
 				 rule = "custom[" + custom_validation_type + "]";
 			 }
